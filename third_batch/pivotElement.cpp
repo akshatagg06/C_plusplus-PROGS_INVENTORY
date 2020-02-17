@@ -1,3 +1,10 @@
+/*
+You are given a sorted but rotated array. You need to fine the index of the pivot 
+element of the array where pivot is that element in the array which is greater than its next element 
+and divides the array into two monotonically increasing halves.
+
+6 7 1 2 3 4 5, 7 is the pivot.
+*/
 #include<bits/stdc++.h>
 using namespace std;
 
