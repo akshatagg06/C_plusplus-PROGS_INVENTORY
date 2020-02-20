@@ -2,36 +2,36 @@
 using namespace std;
 
 int lowerBound(vector <int> &arr, int n, int key){
-    int s = 0, e = n-1, middle, ans = -1;
+    int s = 0, e = n-1, mid, ans = -1;
     while(s<=e){
-        middle = (s+e)/2;
-        if(arr[middle] == key){
-            ans = middle;
-            e = middle-1;
+        mid = (s+e)/2;
+        if(arr[mid] == key){
+            ans = mid;
+            e = mid-1;
         }
-        else if(arr[middle] > key){
-            e = middle-1;
+        else if(arr[mid] > key){
+            e = mid-1;
         }
         else{
-            s = middle + 1;
+            s = mid + 1;
         }
     }
     return ans;
 }
 
 int upperBound(vector <int> &arr, int n, int key){
-    int s = 0, e = n-1, middle, ans = -1;
+    int s = 0, e = n-1, mid, ans = -1;
     while(s<=e){
-        middle = (s+e)/2;
-        if(arr[middle] == key){
-            ans = middle;
-            s = middle+1;
+        mid = (s+e)/2;
+        if(arr[mid] == key){
+            ans = mid;
+            s = mid+1;
         }
-        else if(arr[middle] > key){
-            e = middle-1;
+        else if(arr[mid] > key){
+            e = mid-1;
         }
         else{
-            s = middle + 1;
+            s = mid + 1;
         }
     }
     return ans;
